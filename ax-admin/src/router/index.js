@@ -539,10 +539,6 @@ export const asyncRouterMap = [
     },
     children: [
       {
-        path: 'https://cloud.tencent.com/product/cos',
-        meta: { title: '腾讯云存储', icon: 'link' }
-      },
-      {
         path: 'https://cloud.tencent.com/product/sms',
         meta: { title: '腾讯云短信', icon: 'link' }
       },
@@ -553,18 +549,6 @@ export const asyncRouterMap = [
       {
         path: 'https://mpkf.weixin.qq.com/',
         meta: { title: '小程序客服', icon: 'link' }
-      },
-      {
-        path: 'https://www.alibabacloud.com/zh/product/oss',
-        meta: { title: '阿里云存储', icon: 'link' }
-      },
-      {
-        path: 'https://www.qiniu.com/products/kodo',
-        meta: { title: '七牛云存储', icon: 'link' }
-      },
-      {
-        path: 'http://www.kdniao.com/api-track',
-        meta: { title: '快递鸟', icon: 'link' }
       }
     ]
   },

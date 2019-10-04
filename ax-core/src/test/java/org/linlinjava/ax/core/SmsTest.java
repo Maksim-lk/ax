@@ -4,13 +4,17 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.linlinjava.ax.core.notify.NotifyService;
 import org.linlinjava.ax.core.notify.NotifyType;
+import org.linlinjava.ax.core.notify.config.NotifyProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.task.SyncTaskExecutor;
+import org.springframework.stereotype.Component;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
@@ -28,44 +32,52 @@ import java.util.concurrent.Executor;
  * 3. 在当前测试类设置好正确的手机号码
  */
 @WebAppConfiguration
+@Component
+@ConfigurationProperties(prefix = "ax.notify")
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 public class SmsTest {
 
     @Autowired
     private NotifyService notifyService;
-
+   
+/*
     @Test
-    public void testCaptcha() {
-        String phone = "xxxxxxxxxxx";
-        String[] params = new String[]{"123456"};
-
-        notifyService.notifySmsTemplate(phone, NotifyType.CAPTCHA, params);
+    public void test(){
+    	System.out.println(notifyService.getSmsSign());
     }
+*/
+    //@Test
+    //public void testCaptcha() {
+        //String phone = "xxxxxxxxxxx";
+       // String[] params = new String[]{"123456"};
+
+        //notifyService.notifySmsTemplate(phone, NotifyType.CAPTCHA, params, sign);
+    //}
 
     @Test
     public void testPaySucceed() {
-        String phone = "xxxxxxxxxxx";
+        String phone = "13767255705";
         String[] params = new String[]{"123456"};
-
+        
         notifyService.notifySmsTemplate(phone, NotifyType.PAY_SUCCEED, params);
     }
 
-    @Test
-    public void testShip() {
-        String phone = "xxxxxxxxxxx";
-        String[] params = new String[]{"123456"};
+    //@Test
+    //public void testShip() {
+        //String phone = "xxxxxxxxxxx";
+        //String[] params = new String[]{"123456"};
 
-        notifyService.notifySmsTemplate(phone, NotifyType.SHIP, params);
-    }
+        //notifyService.notifySmsTemplate(phone, NotifyType.SHIP, params);
+    //}
 
-    @Test
-    public void testRefund() {
-        String phone = "xxxxxxxxxxx";
-        String[] params = new String[]{"123456"};
+    //@Test
+    //public void testRefund() {
+        //String phone = "xxxxxxxxxxx";
+        //String[] params = new String[]{"123456"};
 
-        notifyService.notifySmsTemplate(phone, NotifyType.REFUND, params);
-    }
+        //notifyService.notifySmsTemplate(phone, NotifyType.REFUND, params);
+    //}
 
     @Configuration
     @Import(Application.class)

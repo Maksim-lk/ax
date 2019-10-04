@@ -27,7 +27,7 @@ import java.util.concurrent.*;
  * 首页服务
  */
 @RestController
-@RequestMapping("/wx/home")
+@RequestMapping("/ax/home")
 @Validated
 public class WxHomeController {
     private final Log logger = LogFactory.getLog(WxHomeController.class);

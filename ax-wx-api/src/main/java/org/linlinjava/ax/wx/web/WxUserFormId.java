@@ -18,7 +18,7 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @RestController
-@RequestMapping("/wx/formid")
+@RequestMapping("/ax/formid")
 @Validated
 public class WxUserFormId {
     private final Log logger = LogFactory.getLog(WxUserFormId.class);

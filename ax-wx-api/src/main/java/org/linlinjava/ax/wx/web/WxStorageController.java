@@ -24,7 +24,7 @@ import java.util.Map;
  * 对象存储服务
  */
 @RestController
-@RequestMapping("/wx/storage")
+@RequestMapping("/ax/storage")
 @Validated
 public class WxStorageController {
     private final Log logger = LogFactory.getLog(WxStorageController.class);

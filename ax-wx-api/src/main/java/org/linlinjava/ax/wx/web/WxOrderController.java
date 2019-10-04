@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.constraints.NotNull;
 
 @RestController
-@RequestMapping("/wx/order")
+@RequestMapping("/ax/order")
 @Validated
 public class WxOrderController {
     private final Log logger = LogFactory.getLog(WxOrderController.class);

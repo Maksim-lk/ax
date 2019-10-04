@@ -39,7 +39,7 @@ import static org.linlinjava.ax.wx.util.WxResponseCode.*;
  * 鉴权服务
  */
 @RestController
-@RequestMapping("/wx/auth")
+@RequestMapping("/ax/auth")
 @Validated
 public class WxAuthController {
     private final Log logger = LogFactory.getLog(WxAuthController.class);

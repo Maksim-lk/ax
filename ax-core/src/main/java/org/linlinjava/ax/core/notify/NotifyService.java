@@ -1,8 +1,12 @@
 package org.linlinjava.ax.core.notify;
 
+import org.linlinjava.ax.core.notify.config.NotifyProperties;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +15,15 @@ import java.util.Map;
 /**
  * 商城通知服务类
  */
+
 public class NotifyService {
+	
     private MailSender mailSender;
     private String sendFrom;
     private String sendTo;
 
     private SmsSender smsSender;
+    private String smsSign;
     private List<Map<String, String>> smsTemplate = new ArrayList<>();
 
     private WxTemplateSender wxTemplateSender;
@@ -67,7 +74,8 @@ public class NotifyService {
         }
 
         int templateId = Integer.parseInt(templateIdStr);
-        smsSender.sendWithTemplate(phoneNumber, templateId, params);
+        String sign = getSmsSign();
+        smsSender.sendWithTemplate(phoneNumber, templateId, params, sign);
     }
 
     /**
@@ -83,8 +91,8 @@ public class NotifyService {
             return null;
 
         int templateId = Integer.parseInt(getTemplateId(notifyType, smsTemplate));
-
-        return smsSender.sendWithTemplate(phoneNumber, templateId, params);
+        String sign = getSmsSign();
+        return smsSender.sendWithTemplate(phoneNumber, templateId, params, sign);
     }
 
     /**
@@ -153,6 +161,7 @@ public class NotifyService {
         }
         return null;
     }
+    
 
     public void setMailSender(MailSender mailSender) {
         this.mailSender = mailSender;
@@ -181,4 +190,12 @@ public class NotifyService {
     public void setWxTemplate(List<Map<String, String>> wxTemplate) {
         this.wxTemplate = wxTemplate;
     }
+
+	public String getSmsSign() {
+		return smsSign;
+	}
+
+	public void setSmsSign(String smsSign) {
+		this.smsSign = smsSign;
+	}
 }

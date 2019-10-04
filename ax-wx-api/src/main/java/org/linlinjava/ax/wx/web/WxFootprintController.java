@@ -24,7 +24,7 @@ import java.util.Map;
  * 用户访问足迹服务
  */
 @RestController
-@RequestMapping("/wx/footprint")
+@RequestMapping("/ax/footprint")
 @Validated
 public class WxFootprintController {
     private final Log logger = LogFactory.getLog(WxFootprintController.class);

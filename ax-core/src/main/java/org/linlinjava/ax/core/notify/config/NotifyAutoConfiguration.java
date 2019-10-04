@@ -35,6 +35,7 @@ public class NotifyAutoConfiguration {
         if (smsConfig.isEnable()) {
             notifyService.setSmsSender(tencentSmsSender());
             notifyService.setSmsTemplate(smsConfig.getTemplate());
+            notifyService.setSmsSign(smsConfig.getSign());
         }
 
         NotifyProperties.Wx wxConfig = properties.getWx();

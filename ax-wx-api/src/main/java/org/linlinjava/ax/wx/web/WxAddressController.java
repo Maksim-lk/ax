@@ -21,7 +21,7 @@ import java.util.List;
  * 用户收货地址服务
  */
 @RestController
-@RequestMapping("/wx/address")
+@RequestMapping("/ax/address")
 @Validated
 public class WxAddressController extends GetRegionService {
 	private final Log logger = LogFactory.getLog(WxAddressController.class);

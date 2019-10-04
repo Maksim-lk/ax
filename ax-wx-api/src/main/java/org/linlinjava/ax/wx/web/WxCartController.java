@@ -26,7 +26,7 @@ import static org.linlinjava.ax.wx.util.WxResponseCode.GOODS_UNSHELVE;
  * 用户购物车服务
  */
 @RestController
-@RequestMapping("/wx/cart")
+@RequestMapping("/ax/cart")
 @Validated
 public class WxCartController {
     private final Log logger = LogFactory.getLog(WxCartController.class);

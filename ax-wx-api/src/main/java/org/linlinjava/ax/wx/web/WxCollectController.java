@@ -26,7 +26,7 @@ import java.util.Map;
  * 用户收藏服务
  */
 @RestController
-@RequestMapping("/wx/collect")
+@RequestMapping("/ax/collect")
 @Validated
 public class WxCollectController {
     private final Log logger = LogFactory.getLog(WxCollectController.class);

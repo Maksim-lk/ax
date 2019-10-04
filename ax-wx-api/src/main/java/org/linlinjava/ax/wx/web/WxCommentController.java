@@ -26,7 +26,7 @@ import java.util.Map;
  * 用户评论服务
  */
 @RestController
-@RequestMapping("/wx/comment")
+@RequestMapping("/ax/comment")
 @Validated
 public class WxCommentController {
     private final Log logger = LogFactory.getLog(WxCommentController.class);

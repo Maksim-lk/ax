@@ -18,7 +18,7 @@ import java.util.Map;
  * 用户服务
  */
 @RestController
-@RequestMapping("/wx/user")
+@RequestMapping("/ax/user")
 @Validated
 public class WxUserController {
     private final Log logger = LogFactory.getLog(WxUserController.class);

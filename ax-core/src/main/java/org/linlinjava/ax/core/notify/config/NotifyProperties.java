@@ -1,10 +1,12 @@
 package org.linlinjava.ax.core.notify.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 
 @ConfigurationProperties(prefix = "ax.notify")
 public class NotifyProperties {
@@ -97,6 +99,7 @@ public class NotifyProperties {
         private boolean enable;
         private int appid;
         private String appkey;
+        private String sign;
         private List<Map<String, String>> template = new ArrayList<>();
 
         public boolean isEnable() {
@@ -121,6 +124,14 @@ public class NotifyProperties {
 
         public void setAppkey(String appkey) {
             this.appkey = appkey;
+        }
+        
+        public String getSign() {
+        	return sign;
+        }
+        
+        public void setSign(String sign) {
+        	this.sign = sign;
         }
 
         public List<Map<String, String>> getTemplate() {

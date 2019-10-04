@@ -34,7 +34,7 @@ import static org.linlinjava.ax.wx.util.WxResponseCode.*;
  * 需要注意这里团购规则和团购活动的关系和区别。
  */
 @RestController
-@RequestMapping("/wx/groupon")
+@RequestMapping("/ax/groupon")
 @Validated
 public class WxGrouponController {
     private final Log logger = LogFactory.getLog(WxGrouponController.class);

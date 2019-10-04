@@ -26,7 +26,7 @@ import java.util.Map;
  * 专题服务
  */
 @RestController
-@RequestMapping("/wx/topic")
+@RequestMapping("/ax/topic")
 @Validated
 public class WxTopicController {
     private final Log logger = LogFactory.getLog(WxTopicController.class);

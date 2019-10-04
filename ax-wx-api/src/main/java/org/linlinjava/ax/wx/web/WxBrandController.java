@@ -23,7 +23,7 @@ import java.util.Map;
  * 专题服务
  */
 @RestController
-@RequestMapping("/wx/brand")
+@RequestMapping("/ax/brand")
 @Validated
 public class WxBrandController {
     private final Log logger = LogFactory.getLog(WxBrandController.class);

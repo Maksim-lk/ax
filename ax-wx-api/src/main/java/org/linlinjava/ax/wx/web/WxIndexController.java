@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 测试服务
  */
 @RestController
-@RequestMapping("/wx/index")
+@RequestMapping("/ax/index")
 public class WxIndexController {
     private final Log logger = LogFactory.getLog(WxIndexController.class);
 

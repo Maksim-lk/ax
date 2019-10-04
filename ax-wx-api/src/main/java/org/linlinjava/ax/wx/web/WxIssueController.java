@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/wx/issue")
+@RequestMapping("/ax/issue")
 @Validated
 public class WxIssueController {
     private final Log logger = LogFactory.getLog(WxIssueController.class);

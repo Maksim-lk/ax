@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2018/8/25 14:10
  */
 @RestController
-@RequestMapping("/wx/feedback")
+@RequestMapping("/ax/feedback")
 @Validated
 public class WxFeedbackController {
     private final Log logger = LogFactory.getLog(WxFeedbackController.class);
